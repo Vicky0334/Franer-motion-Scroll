@@ -1,12 +1,13 @@
 
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll, useTransform} from 'framer-motion'
 import React from 'react'
 
 const App = () => {
- 
+  const {scrollYProgress} = useScroll();
+  const navbarWidth = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (
-    <motion.div class='main'>
-      <div id="navbar"></div>
+    <motion.div  className='main'>
+      <motion.div style={{width:navbarWidth}} id="navbar"></motion.div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae minus tempora illo repellat aspernatur nesciunt quos non voluptate ipsa odio nobis enim reprehenderit quisquam, consequatur
          <br></br>
         quidem iusto magnam, magni temporibus a dignissimos! Odio magnam debitis soluta numquam harum deleniti aperiam eos odit! Repellat, saepe, non sed doloribus perspiciatis blanditiis magni earum excepturi quibusdam tenetur accusantium cupiditate deserunt amet cumque ipsam impedit ut necessitatibus totam rerum iure aspernatur inventore eaque.
