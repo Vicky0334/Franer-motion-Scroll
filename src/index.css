@@ -1,0 +1,27 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  color: aliceblue;
+  background-color: black;
+}
+
+#navbar{
+  width: 100%;
+  height:8px;
+  background-color: rgb(3, 100, 55);
+  position: fixed;
+}
+p{
+  padding:5% 10%;
+  font-size:27px;
+  font-weight: 500;
+   font-family:monospace;
+   line-height:1.3;
+   white-space: 1px;
+}
